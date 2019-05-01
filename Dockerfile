@@ -8,7 +8,6 @@ WORKDIR /opt/ophicleide
 
 
 RUN easy_install pip \
- && pip install --upgrade setuptools \
  && pip install setuptools==36.2.5 \
  && pip install -r requirements.txt \
  && pip wheel -r wheel-requirements.txt -w . \
@@ -20,3 +19,4 @@ RUN easy_install pip \
 CMD ["/opt/ophicleide/run.sh"]
 
 ENTRYPOINT ["bash","-c"]
+
