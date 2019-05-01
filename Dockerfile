@@ -13,7 +13,7 @@ RUN easy_install pip \
  && pip wheel -r wheel-requirements.txt -w . \
  && mv pymongo*.whl pymongo.zip
 
-#USER 185
+USER 185
 
 #CMD ./run.sh
 CMD ["/opt/ophicleide/run.sh"]
